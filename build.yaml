@@ -22,3 +22,5 @@ include:
     shield: flippie_left
   - board: nice_nano_v2
     shield: flippie_right
+  - board: nice_nano_v2
+    shield: settings_reset
