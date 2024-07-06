@@ -22,41 +22,41 @@
                 >;
         };
 
-        # navi_layer {
-        #     bindings = <
-        #         &none &none &none &none &none                              &none &none &non &none &none
-        #         &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none                &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
-        #         &none &none &none &none &none                              &none &none &none &none &none
-        #                     &none &none &none                              &none &none &none
-        #         >;
-        # };
-        #
-        # num_layer {
-        #     bindings = <
-        #         &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT                        &none &none &non &none &none
-        #         &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL                       &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
-        #         &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH                       &none &none &none &none &none
-        #                      &kp DOT  &kp N0  &kp MINUS                              &none &none &none
-        #         >;
-        # };
-        #
-        # sym_layer {
-        #     bindings = <
-        #         &kp LBRC &kp AMPS &kp STAR &kp LPAR &kp RBR                              &none &none &non &none &none
-        #         &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS                           &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
-        #         &kp TILDE &kp EXCL &kp AT &kp HASH &kp PIPE                              &none &none &none &none &none
-        #                     &kp LPAR &kp RPAR &kp UNDER                              &none &none &none
-        #         >;
-        # };
-        #
-        # bt_layer {
-        #     bindings = <
-        #         &bt BT_CLR &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2       &none &none &none &none &bootloader
-        #         &none &none &none &none &none                                 &none &none &none &none &none
-        #         &none &none &none &none &none                                 &none &none &none &none &none
-        #                     &none &none &none                                 &none &none &none
-        #         >;
-        # };
+        navi_layer {
+            bindings = <
+                &none &none &none &none &none                              &none &none &non &none &none
+                &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none                &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
+                &none &none &none &none &none                              &none &none &none &none &none
+                            &none &none &none                              &none &none &none
+                >;
+        };
+        
+        num_layer {
+            bindings = <
+                &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT                        &none &none &non &none &none
+                &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL                       &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH                       &none &none &none &none &none
+                             &kp DOT  &kp N0  &kp MINUS                              &none &none &none
+                >;
+        };
+        
+        sym_layer {
+            bindings = <
+                &kp LBRC &kp AMPS &kp STAR &kp LPAR &kp RBR                              &none &none &non &none &none
+                &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS                           &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
+                &kp TILDE &kp EXCL &kp AT &kp HASH &kp PIPE                              &none &none &none &none &none
+                            &kp LPAR &kp RPAR &kp UNDER                              &none &none &none
+                >;
+        };
+        
+        bt_layer {
+            bindings = <
+                &bt BT_CLR &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2       &none &none &none &none &bootloader
+                &none &none &none &none &none                                 &none &none &none &none &none
+                &none &none &none &none &none                                 &none &none &none &none &none
+                            &none &none &none                                 &none &none &none
+                >;
+        };
 
 
     };
