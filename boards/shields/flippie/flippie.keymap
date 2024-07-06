@@ -2,18 +2,62 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+
+#define BASE 0
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define BT 4
+
 / {
     keymap {
         compatible = "zmk,keymap";
         
         default_layer {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U &kp I &kp O &kp P 
-                &kp A &kp S &kp D &kp F &kp G           &kp H &kp J &kp K &kp L &kp SEMI 
-                &kp Z &kp X &kp C &kp V &kp B           &kp N &kp M &kp COMMA &kp DOT &kp FSLH 
-                            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2           &bt BT_CLR &bootloader &kp 1
+                &kp Q &kp W &kp E &kp R &kp T                                 &kp Y &kp U &kp I &kp O &kp P 
+                &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G           &kp H &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI 
+                &kp Z &kp X &kp C &kp V &kp B                                 &kp N &kp M &kp COMMA &kp DOT &kp FSLH 
+                            &kp ESC 0 &lt NAV SPC &none                       &lt SYM RET &lt NUM BSCP &to BT
                 >;
         };
+
+        navi_layer {
+            bindings = <
+                &none &none &none &none &none                              &none &none &non &none &none
+                &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none                &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
+                &none &none &none &none &none                              &none &none &none &none &none
+                            &none &none &none                              &none &none &none
+                >;
+        };
+
+        num_layer {
+            bindings = <
+                &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT                        &none &none &non &none &none
+                &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL                       &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH                       &none &none &none &none &none
+                             &kp DOT  &kp N0  &kp MINUS                              &none &none &none
+                >;
+        };
+
+        sym_layer {
+            bindings = <
+                &kp LBRC &kp AMPS &kp STAR &kp LPAR &kp RBR                              &none &none &non &none &none
+                &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS                           &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
+                &kp TILDE &kp EXCL &kp AT &kp HASH &kp PIPE                              &none &none &none &none &none
+                            &kp LPAR &kp RPAR &kp UNDER                              &none &none &none
+                >;
+        };
+
+        bt_layer {
+            bindings = <
+                &bt BT_CLR &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2       &none &none &none &none &bootloader
+                &none &none &none &none &none                                 &none &none &none &none &none
+                &none &none &none &none &none                                 &none &none &none &none &none
+                            &none &none &none                                 &none &none &none
+                >;
+        };
+
 
     };
 
