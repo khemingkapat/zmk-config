@@ -30,7 +30,7 @@
         navi_layer {
             bindings = <
                 &none &none &none &none &none                              &none &none &none &none &none
-                &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none                &kp CAPS LEFT &kp DOWN &kp UP &kp RIGHT &none
+                &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none                &kp CAPS &kp LEFT &kp DOWN &kp UP &kp RIGHT
                 &none &none &none &none &none                              &kp INS &kp HOME &kp PG_UP &kp PG_DN &kp END
                             &none &none &none                              &kp RET &kp BSPC &kp DEL
                 >;
