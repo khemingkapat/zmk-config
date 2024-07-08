@@ -2,9 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
-    tapping-term-ms = <550>;
-};
 
 
 #define BASE 0
@@ -14,6 +11,11 @@
 #define FUN 4
 #define MED 5
 
+
+&ht_tp{
+    tapping-term-ms = <175>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -21,9 +23,9 @@
         default_layer {
             bindings = <
                 &kp Q &kp W &kp E &kp R &kp T                                 &kp Y &kp U &kp I &kp O &kp P 
-                &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G           &kp H &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI 
+                &ht_tp LGUI A &ht_tp LALT S &ht_tp LCTRL D &ht_tp LSHFT F &kp G           &kp H &ht_tp RSHFT J &mt lCTRL K &ht_tp RALT L &ht_tp RGUI SEMI 
                 &kp Z &kp X &kp C &kp V &kp B                                 &kp N &kp M &kp COMMA &kp DOT &kp FSLH 
-                            &lt MED ESC &lt NAV RET &kp TAB                   &lt NUM SPC &lt SYM BSPC &lt FUN DEL
+                            &lt MED ESC &lt NAV RET &kp TAB                   &lt NUM BSPC &lt SYM SPC &lt FUN DEL
                 >;
         };
 
