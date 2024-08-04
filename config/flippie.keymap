@@ -74,6 +74,7 @@
 
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
+    };
 
     combos {
         compatible = "zmk,combos";
