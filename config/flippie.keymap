@@ -16,6 +16,7 @@
 #define SYM 3
 #define FUN 4
 #define MED 5
+#define MAC 6
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
@@ -74,8 +75,20 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
 
-
+    combos {
+        compatible = "zmk,combos";
+        combo_mac {
+            timeout-ms = <50>;
+            key-positions = <26 10 22>;
+            bindings = <&to MAC>;
+        };
+        combo_win {
+            timeout-ms = <50>;
+            key-positions = <1 7 25>;
+            bindings = <&to BASE>;
+        };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -131,6 +144,15 @@
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none                &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &ext_power EP_TOG
                 &none &none &none &none &none                              &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG
                             &none &none &none                              &kp C_STOP &none &kp C_MUTE
+                >;
+        };
+
+        mac_layer {
+            bindings = <
+                &kp Q &kp W &kp E &kp R &kp T                                 &kp Y &kp U &kp I &kp O &kp P 
+                &hml LCTRL A &hml LALT S &hml LGUI D &hmls LSHFT F &kp G      &kp H &hmrs RSHFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI 
+                &kp Z &kp X &kp C &kp V &kp B                                 &kp N &kp M &kp COMMA &kp DOT &kp FSLH 
+                            &lt MED ESC &lt NAV SPC &kp TAB                   &lt NUM RET &lt SYM BSPC &lt FUN DEL
                 >;
         };
 
