@@ -33,19 +33,20 @@
             #binding-cells = <2>;
             bindings = <&kp>,  <&kp>;
             flavor = "balanced";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
 
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
+
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>,  <&kp>;
             flavor = "balanced";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
 
