@@ -33,7 +33,7 @@
             #binding-cells = <2>;
             bindings = <&kp>,  <&kp>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
 
@@ -46,7 +46,7 @@
             #binding-cells = <2>;
             bindings = <&kp>,  <&kp>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
 
